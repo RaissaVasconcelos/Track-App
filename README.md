@@ -1,9 +1,8 @@
 # Track-App
 
-## Criar um rastreador de pacotes de correios
+### Criar um rastreador de pacotes de correios
 
-## Objetivo: Criar um rastreador de pacotes de correio
-	  e ira aparecer o historico de pacotes
+### Objetivo: Criar um rastreador de pacotes de correio e ira aparecer o historico de pacotes
 
 [Req Funcional]
 
@@ -20,7 +19,7 @@
 
 ## Retorno API 
 
-RastreioResult = {
+``` RastreioResult = {
   sucesso: boolean; // sucesso no rastreio
   rastreio: string; // código de rastreio
   entregue?: boolean; // se o objeto foi entregue
@@ -35,3 +34,4 @@ RastreioResult = {
     local?: string; // local do evento (se existir)
   }[];
 }
+```
