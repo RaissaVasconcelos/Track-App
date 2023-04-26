@@ -1,4 +1,4 @@
-import { Input } from './Componentes/Input'
+import { Input } from './Componentes/Input';
 
 function App() {
   return (
