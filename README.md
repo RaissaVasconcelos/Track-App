@@ -19,7 +19,8 @@
 
 ## Retorno API 
 
-``` RastreioResult = {
+```
+RastreioResult = {
   sucesso: boolean; // sucesso no rastreio
   rastreio: string; // código de rastreio
   entregue?: boolean; // se o objeto foi entregue
