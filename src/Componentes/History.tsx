@@ -1,16 +1,18 @@
-import { ContextTrack } from '../Context/context'
+// import { ContextTrack } from '../Context/context'
 import { Card } from './Card'
+import { arrEventos } from '../mock'
 
 export function History() {
-  const { track } = ContextTrack();
+  // const { track } = ContextTrack();
 
-  const arrEventsReverse = track.eventos.reverse();  
+  // const arrEventsReverse = track.eventos.reverse();
+  const arr = arrEventos.reverse();
 
   return (
     <div>
       <h1>Acompanhe seu pedido</h1>
       <p></p>
-      { arrEventsReverse.map((item, index) => (
+      { arr.reverse().map((item: any, index: number) => (
         <Card
           key={index}
           descricao={item.descricao}

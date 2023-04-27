@@ -7,9 +7,9 @@ export function Home(){
   console.log('trackzao', track)
   return (
     <div>
-      <h1 className="text-3xl font-bold underline">Rastreio de encomendas</h1>
       <Input />
-      { track.codObj && <History /> }
+      {/* { track.codObj && <History /> } */}
+      <History />
     </div>
   )
 }
