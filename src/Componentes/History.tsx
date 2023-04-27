@@ -9,9 +9,8 @@ export function History() {
   const arr = arrEventos.reverse();
 
   return (
-    <div>
-      <h1>Acompanhe seu pedido</h1>
-      <p></p>
+    <div className="w-full flex flex-col">
+      <h1 className='text-2xl font-bold justify text-center my-8'>Acompanhe seu pedido</h1>
       { arr.reverse().map((item: any, index: number) => (
         <Card
           key={index}
