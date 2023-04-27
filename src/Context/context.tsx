@@ -20,6 +20,7 @@ export function TrackProvider({ children }: TrackProviderProps) {
   const inputCode = async (data: InputCode) => {
     const response = await api.post('/rastreio', data);
     const responseTrack = response.data.response.objetos[0];
+    console.log('response API', responseTrack)
     const responseEvento = response.data.response.objetos[0].eventos;
     // criar um objeto com o formato de IDataTrack
     const objData = {
