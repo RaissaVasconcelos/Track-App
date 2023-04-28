@@ -1,63 +1,142 @@
 export const arrEventos = [
   {
-    codigo: "PO",
-    descricao: "Objeto postado",
-    dtHrCriado: "2023-03-28T16:26:27",
-    unidade: {
-        endereco: {},
-        nome: "CHINA",
-        tipo: "País"
-    },
+      "codigo": "PO",
+      "descricao": "Objeto postado",
+      "dtHrCriado": "2023-03-22T12:25:43",
+      "unidade": {
+          "endereco": {
+            "cidade": undefined,
+            "uf": undefined,
+          },
+          "tipo": "País"
+      },
+      "unidadeDestino": {
+          "endereco": {
+            "cidade": undefined,
+            "uf": undefined,
+          },
+          "nome": undefined,
+          "tipo": undefined,
+      }
   },
   {
-    codigo: 'PAR',
-    descricao: 'Objeto recebido pelo brasil',
-    dtHrCriado: '2023-03-30T16:22:44',
-    unidade: {
-      endereco: {
-        cidade: 'Curitiba',
-        uf: 'PR'
+      "codigo": "PO",
+      "descricao": "Objeto recebido pelos Correios do Brasil",
+      "dtHrCriado": "2023-03-22T12:25:43",
+      "unidade": {
+          "endereco": {
+            "cidade": "Curitiba",
+            "uf": "PR",
+          },
+          "tipo": "Unidade de Logística Integrada"
       },
-      tipo: 'Unidade Logistica Integrada',
-    },
+      "unidadeDestino": {
+          "endereco": {
+            "cidade": undefined,
+            "uf": undefined,
+          },
+          "nome": undefined,
+          "tipo": undefined,
+      }
   },
   {
-    codigo: 'PAR',
-    descricao: 'Fiscalização Aduaneira finalizada',
-    dtHrCriado: '2023-03-30T16:22:44',
-    unidade: {
-      endereco: {
-        cidade: 'Curitiba',
-        uf: 'PR'
+      "codigo": "PO",
+      "descricao": "Fiscalização aduaneira finalizada",
+      "dtHrCriado": "2023-03-22T12:25:43",
+      "unidade": {
+          "endereco": {
+            "cidade": "Curitiba",
+            "uf": "PR",
+          },
+          "tipo": "Unidade de Logística Integrada"
       },
-      tipo: 'Unidade Logistica Integrada',
-    },
-    unidadeDestino: {
-      endereco: {
-        cidade: 'Itajai',
-        uf: 'SC'
-      },
-      tipo: 'Sedex',
-    }
+      "unidadeDestino": {
+          "endereco": {
+            "cidade": undefined,
+            "uf": undefined,
+          },
+          "nome": undefined,
+          "tipo": undefined,
+      }
   },
   {
-    codigo: 'PAR',
-    descricao: 'Objeto em transito - por favor aguarde',
-    dtHrCriado: '2023-03-30T16:22:44',
-    unidade: {
-      endereco: {
-        cidade: 'Manaus',
-        uf: 'AM'
+      "codigo": "PO",
+      "descricao": "Objeto em trânsito - por favor aguarde",
+      "dtHrCriado": "2023-03-22T12:25:43",
+      "unidade": {
+          "endereco": {
+            "cidade": "Curitiba",
+            "uf": "PR",
+          },
+          "tipo": "Unidade de Logística Integrada"
       },
-      tipo: 'Unidade de tratamento',
-    },
-    unidadeDestino: {
-      endereco: {
-        cidade: 'Manaus',
-        nome: 'CDD Aleixo',
-        uf: 'AM'
-      },
-      tipo: 'Sedex',
-    }
+      "unidadeDestino": {
+          "endereco": {
+            "cidade": "MARABA",
+            "uf": "PA",
+          },
+          "nome": "CTCE MARABA",
+          "tipo": "TCE",
+      }
   },
-]
+  {
+      "codigo": "PO",
+      "descricao": "Objeto em trânsito - por favor aguarde",
+      "dtHrCriado": "2023-03-22T12:25:43",
+      "unidade": {
+          "endereco": {
+            "cidade": "MARABA",
+            "uf": "PA",
+          },
+          "tipo": "Unidade de Tratamento"
+      },
+      "unidadeDestino": {
+          "endereco": {
+            "cidade": "ANAPU",
+            "uf": "PA",
+          },
+          "nome": "AC ANAPU",
+          "tipo": "AC",
+      }
+  },
+  {
+      "codigo": "PO",
+      "descricao": "Objeto aguardando retirada no endereço indicado",
+      "dtHrCriado": "2023-03-22T12:25:43",
+      "unidade": {
+          "endereco": {
+            "cidade": "ANAPU",
+            "uf": "PA",
+          },
+          "tipo": "Agencia dos correios"
+      },
+      "unidadeDestino": {
+          "endereco": {
+            "cidade": undefined,
+            "uf": undefined,
+          },
+          "nome": undefined,
+          "tipo": undefined,
+      }
+  },
+  {
+      "codigo": "PO",
+      "descricao": "Objeto entregue ao destinatário",
+      "dtHrCriado": "2023-03-22T12:25:43",
+      "unidade": {
+          "endereco": {
+            "cidade": "ANAPU",
+            "uf": "PA",
+          },
+          "tipo": "Agencia dos correios"
+      },
+      "unidadeDestino": {
+          "endereco": {
+            "cidade": undefined,
+            "uf": undefined,
+          },
+          "nome": undefined,
+          "tipo": undefined,
+      }
+  },
+  ]

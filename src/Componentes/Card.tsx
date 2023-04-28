@@ -1,5 +1,5 @@
-import { House, Package, Truck } from "@phosphor-icons/react"
-
+// import { House, Package, Truck } from "@phosphor-icons/react"
+import { ImgStatus } from './ImgStatus'
 interface IUnidade {
     endereco: {
       cidade: string,
@@ -10,7 +10,7 @@ interface IUnidade {
     tipo: string,
 }
 
-interface cardProps {
+export interface cardProps {
   descricao: string
   dtHrCriado: string
   unidade: IUnidade,
@@ -36,29 +36,21 @@ export function Card({
         <div className="flex flex-col gap-5">
           <p className="text-1xl font-bold">{descricao}</p>
           <div>
-            { unidadeDestino ? ( 
+            { unidadeDestino?.endereco.cidade === undefined ? (
               <div className="flex gap-3">
-                <Truck size={32} />
-                <div className="flex flex-col gap-3">
-                  <p className="font-bold">{`Destino: ${unidadeDestino.endereco.cidade}/${unidadeDestino.endereco.uf}`}</p>
-                  <p>{`${unidade.tipo} - ${unidade.endereco.cidade}/${unidade.endereco.uf}`}</p>
-                </div>
+                <ImgStatus status={ descricao }/>
+                { unidade.endereco.cidade === undefined ?
+                  <p>{unidade.tipo}</p> :
+                  <p>{`${unidade?.tipo} - ${unidade?.endereco?.cidade}/${unidade?.endereco?.uf}`}</p>}
               </div>
               ) : (
-                <>
-                  { descricao == 'Objeto postado' ? (
-                      <div className="flex gap-3">
-                        <Package size={32} />
-                        <p>{`${unidade?.tipo} - ${unidade?.endereco?.cidade}/${unidade?.endereco?.uf}`}</p>
-                        <p>{unidade?.nome}</p>
-                      </div>
-                    ) : (
-                      <div className="flex gap-3">
-                        <House size={32} />
-                        <p>{`${unidade.tipo} - ${unidade.endereco.cidade}/${unidade.endereco.uf}`}</p>
-                      </div>)
-                  }
-                </>
+              <div className="flex gap-3">
+                <ImgStatus status={ descricao }/>
+                <div className='flex flex-col gap-2'>
+                  <p className="text-1xl font-bold">{`Destino ${unidadeDestino.nome} - ${unidade.endereco.cidade}/${unidade.endereco.uf}`}</p>
+                  <p>{`${unidade?.tipo} - ${unidade?.endereco?.cidade}/${unidade?.endereco?.uf}`}</p>
+                </div>
+              </div>
               ) }
           </div>
         </div>
