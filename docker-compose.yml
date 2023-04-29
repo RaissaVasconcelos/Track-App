@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  web:
+    build: ./
+    container_name: app_track_web
+    working_dir: /track-app
+    restart: always
+    ports:
+      - 3000:3000
+    
