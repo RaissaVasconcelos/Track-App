@@ -1,4 +1,5 @@
 # Track-App
+
 ### Objetivo: Criar um rastreador de pacotes de correios, onde deve ser possível o usuario obter historico do pacote a partir de um código
 
 ## ⚙️ Tecnologias
@@ -11,7 +12,6 @@
 - Context
 - Docker
 - Docker-Compose
- 
 <br />
 
  ## 🚀 Instalação e execução com Docker
@@ -35,8 +35,6 @@ Para testar a aplicação você pode acessar as seguintes urls:
 Para parar os containers, na pasta raiz do projeto execute o comando:
 
     docker-compose down
-
-
 <br />
 
 ## Regras de Negocio
@@ -45,11 +43,11 @@ Para parar os containers, na pasta raiz do projeto execute o comando:
  - O código deve ter suas primeiras letras com as seguintes siglas
    PAC são EC, PD, PI, PJ e PL e o Sedex são SQ e SR
  - O código deve ter suas ultimas letras de acordo com o pais de origem ex: BR
+<br />
 
 ## 💻 Funcionalidades 
 ![Track1](public/track-app-initial.png)
 ![Track3](public/track_app_history.png)
-
 <br />
 
 <div>
