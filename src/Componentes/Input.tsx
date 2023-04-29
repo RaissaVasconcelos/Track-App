@@ -1,6 +1,6 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod'
-// import { ContextTrack } from '../Context/context'
+import { ContextTrack } from '../Context/context'
 import * as z from 'zod'
 
 const inputSchema = z.object({
@@ -11,14 +11,14 @@ const inputSchema = z.object({
 type Input = z.infer<typeof inputSchema>
 
 export function Input() {
-  // const { inputCode } = ContextTrack();
+  const { inputCode } = ContextTrack();
   const { register, handleSubmit, reset, formState: { errors } } = useForm<Input>({
     resolver: zodResolver(inputSchema)
   })
 
   const onSubmit: SubmitHandler<Input> = (data: Input) => {
     console.log(data)
-    // inputCode(data)
+    inputCode(data)
     reset(data)
   }
 
