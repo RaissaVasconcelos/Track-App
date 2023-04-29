@@ -1,3 +1,3 @@
 export interface InputCode {
-  code: string;
+  code: string
 }

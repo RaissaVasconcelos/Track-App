@@ -8,12 +8,12 @@ export function Home(){
   const { track } = ContextTrack();
 
   return (
-    <>
+    <div>
       <Header/>
       <Input />
-      { track.codObj ? <History /> :
+      { track.codObj ? 
+        <History /> :
         <div className="flex justify-center py-12"><FileSearch size={250} color="#ebe7e7" /></div> }
-      {/* <History /> */}
-    </>
+    </div>
   )
 }

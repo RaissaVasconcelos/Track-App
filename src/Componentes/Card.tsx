@@ -1,4 +1,3 @@
-// import { House, Package, Truck } from "@phosphor-icons/react"
 import { ImgStatus } from './ImgStatus'
 interface IUnidade {
     endereco: {

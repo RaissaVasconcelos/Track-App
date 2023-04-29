@@ -8,18 +8,20 @@ const inputSchema = z.object({
   .regex(/^[A-Z]{2}[0-9]{9}[A-Z]{2}$/, 'Código deve possuir 13 caracteres, 4 letras e 9 numeros, por exemplo: AA123456789XX.')
 })
 
-type Input = z.infer<typeof inputSchema>
+export type Input = z.infer<typeof inputSchema>
 
 export function Input() {
-  const { inputCode } = ContextTrack();
+  const { inputCode, msg } = ContextTrack();
   const { register, handleSubmit, reset, formState: { errors } } = useForm<Input>({
     resolver: zodResolver(inputSchema)
   })
 
   const onSubmit: SubmitHandler<Input> = (data: Input) => {
-    console.log(data)
     inputCode(data)
     reset(data)
+    if (msg.includes('Objeto não encontrado')) {
+      alert('Objeto não encontrado na base de dados dos Correios')
+    }
   }
 
   return (
@@ -37,7 +39,7 @@ export function Input() {
             />
             <button className='bg-pink-800 rounded hover:bg-pink-700 text-white font-bold py-2 px-4 rounded' type='submit'>Send</button>
           </div>
-        {errors.code && <span className='text-1xl text-white whitespace-pre-line' >{errors.code.message}</span>}
+          {errors.code && <span className='text-1xl text-white whitespace-pre-line' >{errors.code.message}</span>}
         </form>
       </div>
     </div>

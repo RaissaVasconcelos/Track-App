@@ -1,6 +1,5 @@
 import { ContextTrack } from '../Context/context'
 import { Card } from './Card'
-// import { arrEventos } from '../mock'
 
 export function History() {
   const { track } = ContextTrack();
