@@ -28,7 +28,7 @@ export function Card({
     
   return (
     <div className="w-full py-1">
-      <div className="max-w-[1000px] w-full mx-auto py-10 px-10 border-2 border-indigo-100 border-b-indigo-400 flex gap-8">
+      <div data-testid="card" className="max-w-[1000px] w-full mx-auto py-10 px-10 border-2 border-indigo-100 border-b-indigo-400 flex gap-8">
         <div>
           <p className="text-1xl font-bold">{data}</p>
           <p className="text-1xl">{hora}</p>
